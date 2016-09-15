@@ -1,7 +1,7 @@
 
 # Web Baking - Banco Delta
 
-# Descripción
+## Descripción
 *Web Banking Banco Delta*, es una aplicación para atender a los clientes del Banco Delta. 
 
 Estos clientes podrán ser tanto una persona física, como una empresa.
