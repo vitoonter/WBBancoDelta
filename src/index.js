@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+//router
+import { Router, hashHistory } from 'react-router';
+import { getRoutes } from './routes';
+
+//redux
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-
-import reducers from './reducers';
-
-import App from './App';
+import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
+import * as reducers from './reducers';
 
 const log = store => next => action => {
   console.log('dispatching', action);
@@ -15,16 +18,25 @@ const log = store => next => action => {
   return result;
 }
 
-let createStoreWithMiddleware = applyMiddleware(thunk, log)(createStore);
+const reducer = combineReducers({
+  ...reducers,
+  routing: routerReducer
+})
 
-let store = createStoreWithMiddleware(reducers, window.devToolsExtension ? window.devToolsExtension() : f => f);
+const createStoreWithMiddleware = applyMiddleware(log)(createStore);
 
+const store = createStoreWithMiddleware(reducer, window.devToolsExtension ? window.devToolsExtension() : f => f);
+
+const history = syncHistoryWithStore(hashHistory, store);
 
 const Index = () => 
-	<Provider store={ store } >
-	    <App>
-	    </App>
-	</Provider>
+  <Provider store={store}>
+    <div>
+      <Router history={history}>
+        { getRoutes() }
+      </Router>
+    </div>
+  </Provider>
 
 ReactDOM.render(
   <Index />,
