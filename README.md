@@ -7,6 +7,7 @@
 Estos clientes podrán ser tanto una persona física, como una empresa.
 La aplicación se encarga del front end, y se conecta a un backend de Bantotal para ejecutar las acciones.
 Algunas de las cosas que los clientes podrán realizar son: consulta de saldo, movimientos, estados de cuenta, transferencias, pagos de servicios, etc.
+
 La aplicación esta construida sobre una arquitectura de componentes, construidos con **ReactJS + Redux**.
 
 
@@ -45,7 +46,8 @@ Su estructura estricta de ramas permite trabajar proyectos masivamente grandes. 
 
 _El proceso es el siguiente:_
 
-![N|Solid](https://camo.mybb.com/d3be43cda0ef6e05852809e3045598d8ccfa3e41/687474703a2f2f78656b6b6f2e636f2e756b2f7075626c69632f6d7962622f73756d6d6172792e706e67)
+![N|Solid](https://raw.githubusercontent.com/Voronenko/gitflow-release/master/images/git-workflow-release-cycle-4maintenance.png)
+
 
 **A- Bugs, ramas de mantenimiento**
 
@@ -76,9 +78,13 @@ Finalmente, en el área d, solo denotamos que cuando se genera un release, se va
 
 Con fines de mantener un orden y asegurar consistencia en el código generado. Los features siempre deben ser subidos al repo mediante un pull request, nunca se debe hacer un push directamente a la rama development, mucho menos directamente a master.
 
+El merge a development, al release o a master lo realizará el lider del proyecto.
+
 Los colaboradores, siempre antes de desarrollar un nuevo feature, deberan hacer un "pull origin development". Y a partir de la rama development generar la nueva rama para el feature.
 
 ## Requerimientos
 
 Los requerimientos del proyecto estan documentados en la wiki del repositorio.
 Generalmente se trabajará en Sprint semanales.
+
+Ademas, cada Sprint contara con un Milestone, que dentro contiene la Issues de cada Sprint. Los miembos del equipo tomaran estos Issues que se traducen en ramas de tipo feature.
