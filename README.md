@@ -87,4 +87,4 @@ Los colaboradores, siempre antes de desarrollar un nuevo feature, deberan hacer 
 Los requerimientos del proyecto estan documentados en la [wiki](https://github.com/Bantotal/WBBancoDelta/wiki) del repositorio.
 Generalmente se trabajará en Sprint semanales.
 
-Ademas, cada Sprint contara con un [Milestone](https://github.com/Bantotal/WBBancoDelta/milestones), que dentro contiene la [Issues](https://github.com/Bantotal/WBBancoDelta/issues) de cada Sprint. Los miembos del equipo tomaran estos Issues que se traducen en ramas de tipo feature.
+Ademas, cada Sprint contara con un [Milestone](https://github.com/Bantotal/WBBancoDelta/milestones), que dentro contiene los [Issues](https://github.com/Bantotal/WBBancoDelta/issues) de cada Sprint. Los miembos del equipo tomaran estos Issues que se traducen en ramas de tipo feature.
