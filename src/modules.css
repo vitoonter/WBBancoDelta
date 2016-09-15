@@ -167,6 +167,7 @@ footer{
   height: 222px;
   position: fixed;
   bottom: 0;
+  left: 0;
 }
 
 .security-info{
