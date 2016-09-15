@@ -78,7 +78,7 @@ Finalmente, en el área d, solo denotamos que cuando se genera un release, se va
 
 Con fines de mantener un orden y asegurar consistencia en el código generado. Los features siempre deben ser subidos al repo mediante un pull request, nunca se debe hacer un push directamente a la rama development, mucho menos directamente a master.
 
-El merge a development, al release o a master lo realizará el lider del proyecto.
+El merge a development, al release o a master, lo realizará el lider del proyecto.
 
 Los colaboradores, siempre antes de desarrollar un nuevo feature, deberan hacer un "pull origin development". Y a partir de la rama development generar la nueva rama para el feature.
 
