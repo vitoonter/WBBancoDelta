@@ -8,7 +8,7 @@ Estos clientes podrán ser tanto una persona física, como una empresa.
 La aplicación se encarga del front end, y se conecta a un backend de Bantotal para ejecutar las acciones.
 Algunas de las cosas que los clientes podrán realizar son: consulta de saldo, movimientos, estados de cuenta, transferencias, pagos de servicios, etc.
 
-La aplicación esta construida sobre una arquitectura de componentes, construidos con **ReactJS + Redux**.
+La aplicación esta construida sobre una arquitectura de componentes, construidos con **[ReactJS](https://facebook.github.io/react/) + [Redux](https://github.com/reactjs/redux)**.
 
 
 ## Instalación
@@ -23,7 +23,7 @@ $ cd WBBancoDelta
 $ npm install
 $ npm start
 ```
-Listo, abre el navegador con la url localhost:3000 y veras la aplicación ejecutando.
+Listo, abre el navegador con la url http://localhost:3000 y veras la aplicación ejecutando.
 
 ## Modo de colaboración
 
@@ -84,7 +84,7 @@ Los colaboradores, siempre antes de desarrollar un nuevo feature, deberan hacer 
 
 ## Requerimientos
 
-Los requerimientos del proyecto estan documentados en la wiki del repositorio.
+Los requerimientos del proyecto estan documentados en la [wiki](https://github.com/Bantotal/WBBancoDelta/wiki) del repositorio.
 Generalmente se trabajará en Sprint semanales.
 
-Ademas, cada Sprint contara con un Milestone, que dentro contiene la Issues de cada Sprint. Los miembos del equipo tomaran estos Issues que se traducen en ramas de tipo feature.
+Ademas, cada Sprint contara con un [Milestone](https://github.com/Bantotal/WBBancoDelta/milestones), que dentro contiene la [Issues](https://github.com/Bantotal/WBBancoDelta/issues) de cada Sprint. Los miembos del equipo tomaran estos Issues que se traducen en ramas de tipo feature.
