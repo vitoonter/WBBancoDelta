@@ -3,7 +3,7 @@ import userImage from '../../../images/userImage.png';
 
 const UserImage = () => (
   <a href="#" className="user-image l-right hidden-xs">
-    <img src={userImage}></img>
+    <img src={userImage} alt="user"></img>
   </a>
 )
 

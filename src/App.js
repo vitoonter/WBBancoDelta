@@ -5,15 +5,12 @@ import './modules.css';
 import './state.css';
 import Header from './components/templates/container/Header';
 import Footer from './components/templates/container/Footer';
-import LoginUser from './components/templates/login/LoginUser'
-import LoginPassword from './components/templates/login/LoginPassword'
 
 const App = ({ children }) => 
-  <div>
-    { children }
-    <Header />
-    <LoginUser />
-    <Footer />
-  </div>
-  
+    <div>
+        <Header />
+        { children }
+        <Footer />
+    </div>
+
 export default App;

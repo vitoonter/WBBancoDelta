@@ -1,13 +1,10 @@
-import React, { Component } from 'react';
-import Footer from '../container/Footer'
+import React from 'react'
 import LoginLogo from '../../atoms/loginAtoms/Logo'
 import HelpText from  '../../atoms/loginAtoms/HelpText'
 import InputUser from '../../atoms/loginAtoms/InputUser'
 import Button from '../../atoms/Button'
 
-class LoginUser extends Component{
-  render(){
-    return (
+const LoginUser = () => (
       <div>
         <div className="l-vertical-horizontal-center">
           <div className="container">
@@ -38,8 +35,6 @@ class LoginUser extends Component{
           </div>
         </div>
       </div>
-    );
-  }
-}
+)
 
-export default LoginUser;
+export default LoginUser
