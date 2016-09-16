@@ -88,3 +88,29 @@ Los requerimientos del proyecto estan documentados en la [wiki](https://github.c
 Generalmente se trabajará en Sprint semanales.
 
 Ademas, cada Sprint contara con un [Milestone](https://github.com/Bantotal/WBBancoDelta/milestones), que dentro contiene los [Issues](https://github.com/Bantotal/WBBancoDelta/issues) de cada Sprint. Los miembos del equipo tomaran estos Issues que se traducen en ramas de tipo feature.
+
+## Buenas prácticas
+
+### PropTypes validación
+
+Todos los componentes que necesiten recibir PropTypes debe ser validados.
+Ejemplo
+
+```javascript
+Button.propTypes = {
+  highlighted: React.PropTypes.bool
+};
+```
+
+
+Más información en https://facebook.github.io/react/warnings/dont-call-proptypes.html
+
+### Clases css
+
+No utilizar estilos inline ni en html ni en components react
+
+```html
+<h1 style="color:blue;margin-left:30px;">This is a heading.</h1>
+```
+
+Cambiar su uso por una classes css.
