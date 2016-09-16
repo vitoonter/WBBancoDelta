@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 
 import userImage from '../../../images/dog.svg';
 import Footer from '../container/Footer'
-import { Router, Route, Link, browserHistory } from 'react-router'
-
 import LoginLogo from '../../atoms/loginAtoms/Logo'
 import Button from '../../atoms/Button'
-
 import InputPassword from '../../atoms/loginAtoms/InputPassword'
 
 export default class LoginPassword extends Component {

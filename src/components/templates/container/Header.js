@@ -1,9 +1,9 @@
 import React from 'react';
-import UserImage from '../../atoms/UserImage'
-import UserFullName from '../../atoms/UserFullName'
-import LastConnection from '../../atoms/LastConnection'
+import UserImage from '../../atoms/userAtoms/UserImage'
+import UserFullName from '../../atoms/userAtoms/UserFullName'
+import LastConnection from '../../atoms/userAtoms/LastConnection'
 import HeaderLogoImage from '../../atoms/HeaderLogoImage'
-import Menu from './Menu'
+import Menu from '../../organisms/Menu'
 
 const HeaderUserInformation = () => (
   <div className="l-right">

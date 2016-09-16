@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MenuImage from '../../atoms/MenuImage'
+import MenuImage from '../atoms/MenuImage'
 
 //Get from API
 const ContentMenuComponent = () => (
