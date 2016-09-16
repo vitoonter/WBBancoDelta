@@ -2,7 +2,7 @@ import React from 'react';
 
 const InputUser =({placeholder})=> (           
   <input type="text" 
-    className="input-username l-right" 
+    className="login-input l-center" 
     placeholder={placeholder}
   />
 );

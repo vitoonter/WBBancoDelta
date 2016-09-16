@@ -1,0 +1,24 @@
+.is-border-finished-icon{
+  border-color: #ca003f;
+}
+
+.is-border-current-icon{
+  border-color: #00468b;
+}
+
+.is-border-future-icon{
+  border-color: #a8a8a8;
+}
+
+.is-finished-step{
+  color: #ca003f;
+}
+
+.is-current-step{
+  color: #00468b;
+}
+
+.is-future-step{
+  color: #a8a8a8;
+}
+
