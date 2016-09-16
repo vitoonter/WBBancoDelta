@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
-import Footer from '../container/Footer'
-import { Router, Route, Link, browserHistory } from 'react-router'
+import Footer from '../container/Footer';
 
-import LoginLogo from '../../atoms/loginAtoms/Logo'
-import HelpText from  '../../atoms/loginAtoms/HelpText'
+import LoginLogo from '../../atoms/loginAtoms/Logo';
+import HelpText from  '../../atoms/loginAtoms/HelpText';
 
-import InputUser from '../../atoms/loginAtoms/InputUser'
+import InputUser from '../../atoms/loginAtoms/InputUser';
 
-import Button from '../../atoms/Button'
+import Button from '../../atoms/Button';
 
 class LoginUser extends Component{
   render(){
