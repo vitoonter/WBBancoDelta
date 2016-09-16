@@ -2,7 +2,7 @@ import React from 'react';
 
 const InputPassword =({placeholder,password})=> (
 <input type="text"
-  className="input-username l-right" 
+  className="login-input l-center" 
   type="password"
   name="password"
   placeholder={placeholder}    
