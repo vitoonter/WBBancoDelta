@@ -13,6 +13,5 @@ const App = ({ children }) =>
         <Header />
         <Footer />
     </div>
-);
 
 export default App;

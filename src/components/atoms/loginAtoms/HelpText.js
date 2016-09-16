@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const HelpText = ({text, aditional_text}) => (
 <div className="center-block" >
