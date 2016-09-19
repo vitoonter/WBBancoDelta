@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route , IndexRoute } from 'react-router';
 
-import { LoginUser} from './components';
+import LoginUser from './components/templates/login/LoginUser';
 
 //components
 import App from './App';
