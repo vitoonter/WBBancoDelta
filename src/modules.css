@@ -152,6 +152,7 @@
 }
 
 .menu-image{
+  margin-left: -15px;
   margin-right: 30px;
 }
 
@@ -189,6 +190,7 @@ footer{
   background-color: white;
   position: absolute;
   bottom: 0;
+  left: 0;
   top: calc(107px - 36px);
   margin-top: 37px;
   z-index: 100;
@@ -202,29 +204,40 @@ footer{
 }
 
 .nav-section{
-}
-
-.nav-section--links{
-  list-style-type: square;
-}
-
-.nav-section--links:hover {
-  background-color: #00468b;
-  color: whitesmoke;
-}
-
-.nav-section--links>li>a{
-  margin-top: -10px;
-  color: #414141;
+  font-family: sans-serif;
 }
 
 .nav-section--header{
-  font-family: OpenSans-Semibold;
   font-size: 10px;
   color: #800229;
-  margin-top: 10px;
-  margin-bottom: -10px;
-  margin-left: 15%
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 15%;
+  font-weight: 600;
+}
+
+.nav-section--links{
+  font-size: 14px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.nav-section--links>li{
+  padding: 10px 0;
+  color: #414141;
+}
+
+.nav-section--links>li>i{
+  margin: 2px 0px 0px 57px;
+}
+
+.nav-section--links>li>span{
+  margin-left: 20px;
+}
+
+.nav-section--links>li:hover{
+  background: rgba(0, 69, 139, .79);
+  color: white;
 }
 
 .external-wrapper{
