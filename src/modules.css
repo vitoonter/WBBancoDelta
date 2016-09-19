@@ -26,7 +26,7 @@
   font-stretch: normal;
   color:#7a7a7a;
   padding-top: 25px;
-  padding-bottom: 10px
+  padding-bottom: 20px;
 }
 
 .box--footer-message{
@@ -88,6 +88,7 @@
 .icons-box{
   width: 260px;
   padding: 10px;
+  margin-top: 10px;
 }
 
 .icons--line-betweeen{
@@ -99,16 +100,19 @@
 .icons-position{
   z-index: 3;
   position: absolute;
-  margin-left: 2%
+  left: 0;
+  right: 0;
+  margin-top: -10px;
 }
 
 .icon{
-  margin-top: 5px;
-  margin-right: 5px;
+  margin-top: 8;
+  margin-bottom: 8px;
+  margin-right: 0;
+  margin-left: 0px;
   text-align: center;
   border: 3px solid #00468b;
   border-radius: 100%;
-  margin: 8px;
   padding: 10px;
   color: #00468b;
   background: white;
@@ -124,6 +128,7 @@
 .transference--form{
   width: 260px;
   padding: 10px;
+  margin-top: 25px;
 }
 
 .transference--next-button{
