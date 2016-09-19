@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Label = ({text}) => (
-  <label>{text}</label>
-) 
+  <span>{text}</span>
+)
+
 export default Label;
-
-
