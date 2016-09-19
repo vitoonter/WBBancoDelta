@@ -8,10 +8,9 @@ const ContentMenuComponent = () => (
       <div className="nav-section--header">
         CONSULTAS
       </div>
-      <hr/>
-      <ul className="">
-        <li>Posición</li>
-        <li>Estado de Cuenta</li>
+      <ul className="nav-section--links" >
+        <li><i className="fa fa-square l-left"></i><span>Posición</span></li>
+        <li><i className="fa fa-square l-left"></i><span>Estado de Cuenta</span></li>
       </ul>
     </li>
     <hr/>
@@ -19,15 +18,12 @@ const ContentMenuComponent = () => (
       <div className="nav-section--header">
         TRANSFERENCIAS
       </div>
+      <ul className="nav-section--links">
+        <li><i className="fa fa-square l-left"></i><span>Entre cuentas</span></li>
+        <li><i className="fa fa-square l-left"></i><span>A terceros</span></li>
+      </ul>
       <hr/>
-      <ul className="nav-section--links">
-        <li>Entre cuentas</li>
-      </ul>
-      <ul className="nav-section--links">
-        <li>A terceros</li>
-      </ul>
     </li>
-    <hr/>
   </ul>
 )
 
