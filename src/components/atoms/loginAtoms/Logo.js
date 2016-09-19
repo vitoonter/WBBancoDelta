@@ -1,10 +1,8 @@
 import React from 'react'
-import logoLogin from '../../../images/logodelta.svg';
+import logo from '../../../images/logodelta.svg';
 
 const LoginLogo = ({text, aditional_text}) => (
-  <div className="col-md-12">
-    <img src={logoLogin} className="l-center" alt="logo"></img>
-  </div>
+  <img src={logo} className="l-center" alt="logo"></img>
 );
 
-export default LoginLogo
+export default LoginLogo;
