@@ -36,8 +36,8 @@ const Transference2 = ()=>(
                       <Input placeholder="ingrese el código" />
                       <br/>
                       <div className="buttons">
-                        <Button link="transferencia1" className="transference--previous-button" text="VOLVER"/>
-                        <Button link="transferencia3" className="transference--next-button l-right" text="SIGUIENTE" />
+                        <Button link="transference1" className="transference--previous-button" text="VOLVER"/>
+                        <Button link="transference3" className="transference--next-button l-right" text="SIGUIENTE" />
                       </div>
                     </div>
                   </form>
