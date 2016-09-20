@@ -174,7 +174,6 @@
 }
 
 .menu-image{
-  margin-right: 30px;
   cursor: pointer;
 }
 
@@ -185,6 +184,7 @@
 
 .header-logo{
   cursor: pointer;
+  margin-left: 30px;
 }
 
 .last-connection{
@@ -213,16 +213,17 @@ footer{
   position: absolute;
   bottom: 0;
   left: 0;
-  top: calc(107px - 36px);
-  margin-top: 37px;
+  top: calc(100% + 1px);
   z-index: 100;
   border-right: 1px solid #ebe9ea;
   border-left: 1px solid #ebe9ea;
   border-bottom: 1px solid #ebe9ea;
+  height: calc(100vh + 114px);
 }
 
 .nav-bar{
   border-bottom: 1px solid #ebe9ea;
+  position: relative;
 }
 
 .nav-section{
