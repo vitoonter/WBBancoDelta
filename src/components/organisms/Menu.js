@@ -52,7 +52,7 @@ class Menu extends Component{
   render(){
     return (
       <span>
-        <a href="#" className="menu-image" onClick={() => this.handleMenuClick()}>
+        <a className="menu-image" onClick={() => this.handleMenuClick()}>
           <MenuImage />
         </a>
         {this.renderMenuBar()}
