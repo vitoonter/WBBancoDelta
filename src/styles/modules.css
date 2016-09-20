@@ -97,6 +97,7 @@
   padding: 0 2px;
   margin: 0 -2px;
   border-bottom: 3px solid;
+  z-index: -1;
 }
 
 .icons-position{
