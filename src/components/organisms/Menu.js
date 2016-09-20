@@ -3,28 +3,7 @@ import MenuImage from '../atoms/MenuImage'
 
 //Get from API
 const ContentMenuComponent = () => (
-  <ul className='nav'>
-    <li className="nav-section">
-      <div className="nav-section--header">
-        CONSULTAS
-      </div>
-      <ul className="nav-section--links" >
-        <li><i className="fa fa-square l-left"></i><span>Posición</span></li>
-        <li><i className="fa fa-square l-left"></i><span>Estado de Cuenta</span></li>
-      </ul>
-    </li>
-    <hr/>
-    <li className="nav-section">
-      <div className="nav-section--header">
-        TRANSFERENCIAS
-      </div>
-      <ul className="nav-section--links">
-        <li><i className="fa fa-square l-left"></i><span>Entre cuentas</span></li>
-        <li><i className="fa fa-square l-left"></i><span>A terceros</span></li>
-      </ul>
-      <hr/>
-    </li>
-  </ul>
+  <span></span>
 )
 
 class Menu extends Component{
