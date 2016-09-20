@@ -140,8 +140,9 @@
 }
 
 .transference--final-status{
-  width: 612px;
-  padding: 10px;
+  max-width: 612px;
+  text-align: justify;
+  padding: 20px;
   margin-top: 25px;
   color: #606060;
 }
