@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../container/Header';
 import Label from '../../atoms/Label';
-import Input from '../../atoms/Input';
-import Button from '../../atoms/Button';
 import BoxHeader from '../../organisms/BoxHeader';
 
 class Transference3 extends Component {
