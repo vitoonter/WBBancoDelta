@@ -34,11 +34,14 @@ const Transference2 = ()=>(
                     <div className="form-group">
                       <Label text="CÓDIGO TOKEN:"/>
                       <Input placeholder="ingrese el código" />
-                      <br/>
-                      <div className="buttons">
-                        <Button link="transference1" className="transference--previous-button" text="VOLVER"/>
-                        <Button link="transference3" className="transference--next-button l-right" text="SIGUIENTE" />
+                      <div className="row">
+                      <div className="col-md-6 md-6--buttons">
+                          <Button link="transference1" className="transference--previous-button" text="VOLVER"/>
+                      </div> 
+                      <div className="col-md-6 md-6--buttons">
+                          <Button link="transference3" className="transference--next-button " text="SIGUIENTE" />
                       </div>
+                    </div>
                     </div>
                   </form>
                 </div>
