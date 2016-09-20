@@ -1,11 +1,11 @@
 import React from 'react';
 
-const InputPassword =({placeholder,password})=> (
-<input type="text"
-  className="login-input l-center" 
-  type="password"
-  name="password"
-  placeholder={placeholder}    
-/>
-);
+const InputPassword =({ placeholder }) =>
+	<input
+	  className="login-input l-center" 
+	  type="password"
+	  name="password"
+	  placeholder={placeholder}    
+	/>
+
 export default InputPassword;
