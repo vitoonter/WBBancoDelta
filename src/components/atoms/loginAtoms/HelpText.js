@@ -1,7 +1,7 @@
 import React from 'react';
 
 const HelpText = ({text, aditional_text}) => (
-	<div className="center-block" >
+	<div>
 	  {text}
 	  <span className="security-info">
 	    {aditional_text}

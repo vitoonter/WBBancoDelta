@@ -26,7 +26,7 @@ const LoginUser = () => (
           </div>
         </div>
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-12 center-block box--footer-message">
             <HelpText text="Le invitamos a ingresar a nuestra página web para mantenerse actualizado en todo lo referente a las medidas de seguridad básicas, que debe tomaren cuenta para mantener su "
               aditional_text="información segura"
             />
