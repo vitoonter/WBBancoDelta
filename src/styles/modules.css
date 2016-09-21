@@ -97,6 +97,7 @@
   padding: 0 2px;
   margin: 0 -2px;
   border-bottom: 3px solid;
+  z-index: -1;
 }
 
 .icons-position{
@@ -140,8 +141,9 @@
 }
 
 .transference--final-status{
-  width: 612px;
-  padding: 10px;
+  max-width: 612px;
+  text-align: justify;
+  padding: 20px;
   margin-top: 25px;
   color: #606060;
 }
