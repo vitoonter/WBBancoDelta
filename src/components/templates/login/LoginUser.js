@@ -19,14 +19,16 @@ const LoginUser = () => (
               <div className="form-group login-border clearfix">
                 <i className="fa fa-user fa-2x l-left" >
                 </i>
-                <InputUser className="login-input" placeholder="NOMBRE DE USUARIO"/>
+                <div className="l-left">
+                  <InputUser className="login-input" placeholder="NOMBRE DE USUARIO"/>
+                </div>
               </div>
               <Button link="/login-password" className="login-button" text="SIGUIENTE"/>
             </form>
           </div>
         </div>
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-12 center-block box--footer-message">
             <HelpText text="Le invitamos a ingresar a nuestra página web para mantenerse actualizado en todo lo referente a las medidas de seguridad básicas, que debe tomaren cuenta para mantener su "
               aditional_text="información segura"
             />

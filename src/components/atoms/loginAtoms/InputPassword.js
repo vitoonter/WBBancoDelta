@@ -2,10 +2,10 @@ import React from 'react';
 
 const InputPassword =({ placeholder }) =>
 	<input
-	  className="login-input l-center" 
+	  className="login-input"
 	  type="password"
 	  name="password"
-	  placeholder={placeholder}    
+	  placeholder={placeholder}
 	/>
 
 export default InputPassword;
