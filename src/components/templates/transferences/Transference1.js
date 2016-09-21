@@ -55,8 +55,14 @@ export default class Transference1 extends Component {
                 <div className="form-group">
                   <Label text="REFERENCIA"/>
                   <Input placeholder="ingrese una referencia"/>
+                </div>               
+                <div className="row">
+                  <div className="col-md-6">
+                  </div>
+                  <div className="col-md-6 md-6--buttons">
+                    <Button link="transference2" className="transference--next-button l-right" text="SIGUIENTE"/>
+                  </div>
                 </div>
-                <Button link="transference2" className="transference--next-button l-right" text="SIGUIENTE"/>
               </div>
             </div>
           </div>
