@@ -4,6 +4,7 @@ import UserFullName from '../../atoms/userAtoms/UserFullName'
 import LastConnection from '../../atoms/userAtoms/LastConnection'
 import HeaderLogoImage from '../../atoms/HeaderLogoImage'
 import Menu from '../../organisms/Menu'
+import MenuImage from '../../atoms/MenuImage'
 
 const HeaderUserInformation = () => (
   <div className="l-right">
@@ -12,10 +13,10 @@ const HeaderUserInformation = () => (
   </div>
 )
 
-const Header = () => (
+const Header = ({onMenuClicked}) => (
   <nav className="nav-bar navbar-default clearfix">
     <div className="container header-space">
-      <Menu />
+      <MenuImage onMenuClicked={onMenuClicked}/>
       <HeaderLogoImage />
       <UserImage />
       <HeaderUserInformation />
