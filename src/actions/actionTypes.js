@@ -1,1 +1,3 @@
 export const SHOW_MENU = 'SHOW_MENU';
+export const SHOW_USERNAME = 'SHOW_USERNAME';
+export const SHOW_USERIMAGE = 'SHOW_USERIMAGE';
