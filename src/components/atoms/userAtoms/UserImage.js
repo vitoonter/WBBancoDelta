@@ -1,10 +1,11 @@
 import React from 'react';
-import userImage from '../../../images/userImage.png';
 
-const UserImage = () => (
+const UserImage = ({image}) => {
+  return (
   <a className="user-image l-right hidden-xs">
-    <img src={userImage} alt="user"></img>
+    <img src={image} alt="user"></img>
   </a>
 )
+}
 
 export default UserImage;

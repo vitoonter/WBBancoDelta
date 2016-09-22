@@ -1,10 +1,11 @@
 import React from 'react';
 import Footer from '../components/templates/container/Footer';
 import Header from '../components/templates/container/Header';
+import { connect } from 'react-redux';
 
-const TransferenceLayout = ({ children }) =>
+const TransferenceLayout = ({ children , username, userImage}) =>
   <div>
-    <Header />
+    <Header username={username} userImage={userImage}/>
     <div className="external-wrapper">
       <ul className='nav'>
         <li className="nav-section">
@@ -33,4 +34,13 @@ const TransferenceLayout = ({ children }) =>
     </div>
   </div>
 
-export default TransferenceLayout;
+const mapStateToProps = state => {
+  return {
+    username: state.sessionReducer.username,
+    userImage: state.sessionReducer.imgURL
+  };
+}
+
+export default connect(
+  mapStateToProps,
+)(TransferenceLayout)

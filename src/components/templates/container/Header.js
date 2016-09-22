@@ -5,22 +5,25 @@ import LastConnection from '../../atoms/userAtoms/LastConnection'
 import HeaderLogoImage from '../../atoms/HeaderLogoImage'
 import Menu from '../../organisms/Menu'
 
-const HeaderUserInformation = () => (
+const HeaderUserInformation = ({username}) => (
   <div className="l-right">
-    <UserFullName text="Eugenia Rodriguez" />
-    <LastConnection /> 
+    <UserFullName text={username} />
+    <LastConnection />
   </div>
 )
 
-const Header = () => (
+const Header = ({username, userImage}) => {
+  debugger;
+  return (
   <nav className="nav-bar navbar-default clearfix">
     <div className="container header-space">
       <Menu />
       <HeaderLogoImage />
-      <UserImage />
-      <HeaderUserInformation />
+      <UserImage image={userImage}/>
+      <HeaderUserInformation username={username}/>
     </div>
   </nav>
 )
+}
 
 export default Header;
