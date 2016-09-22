@@ -6,9 +6,9 @@ import showMenu from '../actions/index.js';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-const TransferenceLayout = ({ children, isVisibleMenu, showMenu }) => (
+const TransferenceLayout = ({ children, isVisibleMenu, showMenu, username, userImage }) => (
   <div>
-    <Header onMenuClicked={showMenu} />
+    <Header onMenuClicked={showMenu} username={username} userImage={userImage}/>
     <div className="external-wrapper">
       <Menu isVisibleMenu={isVisibleMenu}/>
       { children }
@@ -18,7 +18,11 @@ const TransferenceLayout = ({ children, isVisibleMenu, showMenu }) => (
 )
 
 const mapStateToProps = state => {
-  return {isVisibleMenu: state.menuReducer.isVisibleMenu};
+  return {
+    isVisibleMenu: state.menuReducer.isVisibleMenu,
+    username: state.sessionReducer.username,
+    userImage: state.sessionReducer.imgURL
+  };
 }
 
 function mapDispatchToProps(dispatch) {
