@@ -1,3 +1,4 @@
+import * as types from './actionTypes'
 import { CALL_API, Schemas } from '../middleware/api'
 
 export const GITHUB_REQUEST = 'GITHUB_REQUEST'
@@ -20,3 +21,9 @@ export function loadGitHub() {
     return dispatch(fetchUser())
   }
 }
+
+const showMenu = () => {
+  return {type: types.SHOW_MENU}
+}
+
+export default showMenu;
