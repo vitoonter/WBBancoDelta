@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux'
+import menuReducer from './menu'
 import { routerReducer as routing } from 'react-router-redux'
 import merge from 'lodash/merge'
 
@@ -39,7 +40,8 @@ function fetch(state = { isFetching: false, error: null }, action) {
 const rootReducer = combineReducers({
   routing,
   entities,
-  fetch
+  fetch,
+  menuReducer
 })
 
 export default rootReducer
