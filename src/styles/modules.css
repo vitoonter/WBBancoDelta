@@ -270,3 +270,8 @@
 .login-image-xs{
   margin: 20px 0;
 }
+
+.languages-box{
+  position: fixed;
+  z-index: 1;
+}
