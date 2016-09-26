@@ -2,36 +2,45 @@ import { Schema, arrayOf, normalize } from 'normalizr'
 import { camelizeKeys } from 'humps'
 import 'isomorphic-fetch'
 
-const API_ROOT = 'https://api.github.com/'
+const API_ROOT = 'http://10.18.1.96:4000/'
 
 // Realiza la invocación a la API y normaliza el resultado JSON a partir de un schema 
 // Esto hace que todos los llamados a la API tengan la misma forma
-function callApi(endpoint, schema) {
+function callApi(endpoint, schema, body) {
   const fullUrl = (endpoint.indexOf(API_ROOT) === -1) ? API_ROOT + endpoint : endpoint
 
   // Esta hecho solo para el GET, luego para el post habria que recibir los parametros y agregarlos al fetch
   // Otras cosas a agregar son por ej el token de session
-  return fetch(fullUrl)
-    .then(response =>
+
+  return fetch(fullUrl,
+    {
+      method: 'post',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: body,
+    }
+  ).then(response =>
       response.json().then(json => ({ json, response }))
-    ).then(({ json, response }) => {
-      if (response.status >= 400) {
-        return Promise.reject(json)
-      }
+  ).then(({ json, response }) => {
+    if (response.status >= 400) {
+      return Promise.reject(json)
+    }
 
-      // En el front, vamos a usar camelCase para todos los datos, 
-      // con esto nos aseguramos de que si el server manda otro formato no tenemos problema
-      const camelizedJson = camelizeKeys(json)
+    // En el front, vamos a usar camelCase para todos los datos, 
+    // con esto nos aseguramos de que si el server manda otro formato no tenemos problema
+    const camelizedJson = camelizeKeys(json)
 
-      return Object.assign({},
-        normalize(camelizedJson, schema) // pasa el resultado al schema
-      )
-    })
+    return Object.assign({},
+      normalize(camelizedJson, schema) // pasa el resultado al schema
+    )
+  })
 }
 
 // Schemas creados, esto habria que seperarlo en archivos cuando se tengan muchos
 const userSchema = new Schema('users', {
-  idAttribute: user => user.login.toLowerCase()
+  idAttribute: user => user
 })
 
 // Expone los Schemas para importarlo desde otros archivos, por ej los actions
@@ -52,8 +61,8 @@ export default store => next => action => {
   }
 
   let { endpoint } = callAPI
-  const { schema, types } = callAPI
-  
+  const { schema, types, body } = callAPI
+
   if (typeof endpoint === 'function') {
     endpoint = endpoint(store.getState())
   }
@@ -82,8 +91,8 @@ export default store => next => action => {
   next({ type: 'FETCH_REQUEST', endpoint: endpoint })
   next(actionWith({ type: requestType }))
 
-  return callApi(endpoint, schema).then(
-    response => { 
+  return callApi(endpoint, schema, body).then(
+    response => {
       next({ type: 'FETCH_RESPONSE', endpoint: endpoint })
       next(actionWith({response, type: successType }))
     },
