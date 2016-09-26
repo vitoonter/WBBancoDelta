@@ -2,7 +2,8 @@ import { combineReducers } from 'redux'
 import { routerReducer as routing } from 'react-router-redux'
 import merge from 'lodash/merge'
 import menuReducer from './menu'
-import sessionReducer from './session';
+import sessionReducer from './session'
+import language from './language'
 
 // Guarda una entidad obtenida de la api (response.entities) en el state (caso github), 
 // hay que ver como lo manda el back de banco delta
@@ -43,7 +44,8 @@ const rootReducer = combineReducers({
   entities,
   fetch,
   menuReducer,
-  sessionReducer
+  sessionReducer,
+  language
 })
 
 export default rootReducer;
