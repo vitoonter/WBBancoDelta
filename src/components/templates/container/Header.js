@@ -3,7 +3,6 @@ import UserImage from '../../atoms/userAtoms/UserImage'
 import UserFullName from '../../atoms/userAtoms/UserFullName'
 import LastConnection from '../../atoms/userAtoms/LastConnection'
 import HeaderLogoImage from '../../atoms/HeaderLogoImage'
-import Menu from '../../organisms/Menu'
 import MenuImage from '../../atoms/MenuImage'
 
 const HeaderUserInformation = ({username, lastConnection}) => (

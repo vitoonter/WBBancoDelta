@@ -1,5 +1,4 @@
 import React from 'react'
-import Steps from './Steps';
 
 const Languages = ({changeLanguage}) => 
   <div className="languages-box">

@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import MenuImage from '../atoms/MenuImage'
+import React from 'react';
 
 const Menu = ({isVisibleMenu}) => 
-  <ul className = {(isVisibleMenu) ? 'nav is-visible' : 'nav is-not-visible' }>
+  <ul className={(isVisibleMenu) ? 'nav is-visible' : 'nav is-not-visible' }>
     <li className="nav-section">
       <div className="nav-section--header">
         CONSULTAS
