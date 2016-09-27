@@ -6,7 +6,7 @@ const API_ROOT = 'http://10.18.1.96:4000/'
 
 // Realiza la invocación a la API y normaliza el resultado JSON a partir de un schema 
 // Esto hace que todos los llamados a la API tengan la misma forma
-function callApi(endpoint, schema, body) {
+function callApi(endpoint, schema, method, body) {
   const fullUrl = (endpoint.indexOf(API_ROOT) === -1) ? API_ROOT + endpoint : endpoint
 
   // Esta hecho solo para el GET, luego para el post habria que recibir los parametros y agregarlos al fetch
@@ -14,7 +14,7 @@ function callApi(endpoint, schema, body) {
 
   return fetch(fullUrl,
     {
-      method: 'post',
+      method: method,
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json'
@@ -31,7 +31,6 @@ function callApi(endpoint, schema, body) {
     // En el front, vamos a usar camelCase para todos los datos, 
     // con esto nos aseguramos de que si el server manda otro formato no tenemos problema
     const camelizedJson = camelizeKeys(json)
-
     return Object.assign({},
       normalize(camelizedJson, schema) // pasa el resultado al schema
     )
@@ -39,14 +38,13 @@ function callApi(endpoint, schema, body) {
 }
 
 // Schemas creados, esto habria que seperarlo en archivos cuando se tengan muchos
-const userSchema = new Schema('users', {
+const userSchema = new Schema('user', {
   idAttribute: user => user
 })
 
 // Expone los Schemas para importarlo desde otros archivos, por ej los actions
 export const Schemas = {
-  USER: userSchema,
-  USER_ARRAY: arrayOf(userSchema)
+  USER: userSchema
 }
 
 // Cuando el middleware recibe este tipo de symbol en el action, 
@@ -61,7 +59,7 @@ export default store => next => action => {
   }
 
   let { endpoint } = callAPI
-  const { schema, types, body } = callAPI
+  const { schema, types, method, body } = callAPI
 
   if (typeof endpoint === 'function') {
     endpoint = endpoint(store.getState())
@@ -91,7 +89,7 @@ export default store => next => action => {
   next({ type: 'FETCH_REQUEST', endpoint: endpoint })
   next(actionWith({ type: requestType }))
 
-  return callApi(endpoint, schema, body).then(
+  return callApi(endpoint, schema, method, body).then(
     response => {
       next({ type: 'FETCH_RESPONSE', endpoint: endpoint })
       next(actionWith({response, type: successType }))
