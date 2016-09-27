@@ -1,11 +1,27 @@
 import React from 'react'
 import LoginLogo from '../../atoms/loginAtoms/Logo'
 import HelpText from  '../../atoms/loginAtoms/HelpText'
-import InputUser from '../../atoms/loginAtoms/InputUser'
-import Button from '../../atoms/Button'
-import { defineMessages, injectIntl, intlShape, FormattedMessage } from 'react-intl';
+import { login } from '../../../actions/index.js';
+import { connect } from 'react-redux';
 
-class LoginUser extends React.Component  {
+class LoginUser extends React.Component{
+
+  constructor(props) {
+    super(props);
+    this.state = {username: ""};
+    this.onChange = this.onChange.bind(this);
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onChange(e) {
+    let state = {};
+    state[e.target.name] = e.target.value;
+    this.setState(state);
+  }
+
+  onClick() {
+    this.props.login(this.state.username);
+  }
 
   render() {
     return (
@@ -24,10 +40,15 @@ class LoginUser extends React.Component  {
                     <i className="fa fa-user fa-2x l-left" >
                     </i>
                     <div className="l-left">
-                      <InputUser className="login-input" placeholder={this.context.intl.formatMessage({id:"USER_NAME"})}/>
+                      <input type="text"
+                        className="login-input"
+                        onChange={this.onChange}
+                        name="username"
+                        placeholder={this.context.intl.formatMessage({id:"USER_NAME"})}
+                      />
                     </div>
                   </div>
-                  <Button link="/login-password" className="login-button" text={this.context.intl.formatMessage({id:"NEXT"})}/>
+                  <button type="button" className="login-button" onClick={this.onClick}>{this.context.intl.formatMessage({id:"NEXT"})}</button>
                 </form>
               </div>
             </div>
@@ -49,4 +70,19 @@ LoginUser.contextTypes ={
  intl:React.PropTypes.object.isRequired
 }
 
-export default LoginUser;
+const mapStateToProps = state => {
+  return state;
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+   login: (username) => {
+     dispatch(login(username));
+   }
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LoginUser)
