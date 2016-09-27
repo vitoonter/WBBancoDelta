@@ -12,6 +12,7 @@ function fetchUser(username) {
       types: [ LOGIN_USER_REQUEST, LOGIN_USER_SUCCESS, LOGIN_USER_FAILURE ],
       endpoint: `logginUsername`,
       schema: Schemas.USER,
+      method: 'POST',
       body: JSON.stringify({
         username: username,
       })

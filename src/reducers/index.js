@@ -7,11 +7,11 @@ import language from './language'
 
 // Guarda una entidad obtenida de la api (response.entities) en el state (caso github), 
 // hay que ver como lo manda el back de banco delta
-function entities(state = { users: {} }, action) {
-	if (action.response && action.response.entities) {
-		return merge({}, state, action.response.entities)
-	}
-	return state
+function entities(state = { user: {} }, action) {
+  if (action.response && action.response.result) {
+    return merge({}, state, action.response.result)
+  }
+  return state
 }
 
 // este reducer se encarga de manejar el estado de los request

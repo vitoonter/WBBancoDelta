@@ -1,5 +1,4 @@
 const initialState = {
-  username: 'Eugenia Rodriguez',
   imgURL: 'http://10.18.1.64:4000/wallpaper.jpg'
 }
 
