@@ -1,5 +1,4 @@
 import React from 'react';
-import ComboBox from '../../atoms/ComboBox'
 import Label from '../../atoms/Label'
 import Input from '../../atoms/Input'
 import Button from '../../atoms/Button'

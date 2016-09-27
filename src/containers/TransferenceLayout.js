@@ -4,7 +4,6 @@ import Header from '../components/templates/container/Header';
 import Menu from '../components/organisms/Menu';
 import showMenu from '../actions/index.js';
 import { connect } from 'react-redux';
-import {bindActionCreators} from 'redux';
 
 const TransferenceLayout = ({ children, isVisibleMenu, showMenu, username, userImage }) => (
   <div>
