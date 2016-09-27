@@ -114,3 +114,11 @@ No utilizar estilos inline ni en html ni en components react
 ```
 
 Cambiar su uso por una classes css.
+
+## Test
+
+Se utiliza Enzyme para los test.
+Los nombres de los archivos test van con el sufijo .test en la misma carpeta que el componente a testear
+
+Ejemplo
+Input.js -> Input.test.js
