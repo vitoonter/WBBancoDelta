@@ -3,11 +3,7 @@ import { Route, IndexRoute } from 'react-router';
 import App from './containers/App';
 import LoginLayout from './containers/LoginLayout';
 import TransferenceLayout from './containers/TransferenceLayout';
-import LoginUser from './components/templates/login/LoginUser';
-import LoginPassword from './components/templates/login/LoginPassword';
-import Transference1 from './components/templates/transferences/Transference1.js';
-import Transference2 from './components/templates/transferences/Transference2.js';
-import Transference3 from './components/templates/transferences/Transference3.js';
+import { LoginUser, LoginPassword, Transference1, Transference2, Transference3 } from './components';
 import Test1 from './components/test1';
 
 export default (
