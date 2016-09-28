@@ -1,4 +1,3 @@
-import * as types from './actionTypes'
 import { CALL_API, Schemas } from '../middleware/api'
 
 export const USER_INFO_REQUEST = 'USER_INFO_REQUEST'

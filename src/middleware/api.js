@@ -1,4 +1,4 @@
-import { Schema, arrayOf, normalize } from 'normalizr'
+import { Schema, normalize } from 'normalizr'
 import { camelizeKeys } from 'humps'
 import 'isomorphic-fetch'
 
