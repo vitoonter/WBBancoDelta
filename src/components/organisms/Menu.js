@@ -1,27 +1,27 @@
 import React from 'react';
 
-const Menu = ({isVisibleMenu}) => 
+const Menu = ({isVisibleMenu, options}) =>
   <ul className={(isVisibleMenu) ? 'nav is-visible' : 'nav is-not-visible' }>
-    <li className="nav-section">
-      <div className="nav-section--header">
-        CONSULTAS
-      </div>
-      <ul className="nav-section--links" >
-        <li><i className="fa fa-square l-left"></i><span>Posición</span></li>
-        <li><i className="fa fa-square l-left"></i><span>Estado de Cuenta</span></li>
-      </ul>
-    </li>
-    <hr/>
-    <li className="nav-section">
-      <div className="nav-section--header">
-        TRANSFERENCIAS
-      </div>
-      <ul className="nav-section--links">
-        <li><i className="fa fa-square l-left"></i><span>Entre cuentas</span></li>
-        <li><i className="fa fa-square l-left"></i><span>A terceros</span></li>
-      </ul>
-      <hr/>
-    </li>
+    {Object.keys(options).map(function (name) {
+      var items = options[name];
+      return (
+        <div key={name}>
+          <li className="nav-section">
+            <div className="nav-section--header">
+              {name}
+            </div>
+            <ul className="nav-section--links" >
+              {items.map(function(item, index){
+                return (
+                  <li key={index}><i className="fa fa-square l-left"></i><span>{item}</span></li>
+                )
+              })}
+            </ul>
+          </li>
+          <hr/>
+        </div>
+      );
+    })}
   </ul>
 
 export default Menu;
