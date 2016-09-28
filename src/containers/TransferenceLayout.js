@@ -13,13 +13,27 @@ class TransferenceLayout extends Component {
   }
 
   render() {
-    const { children, isVisibleMenu, showMenu, firstname, lastname, userImage, lastConnection } = this.props;
+    const { children, isVisibleMenu, showMenu, firstname, lastname, userImage, lastConnection, options } = this.props;
 
     return  (
       <div>
         <Header onMenuClicked={showMenu} username={`${firstname} ${lastname}`} lastConnection={lastConnection} userImage={userImage}/>
         <div className="external-wrapper">
-          <Menu isVisibleMenu={isVisibleMenu}/>
+        {/* real usage <Menu isVisibleMenu={isVisibleMenu} options={options}/> */}
+
+        {/* delete this */}
+          <Menu
+            isVisibleMenu={isVisibleMenu}
+            options={{
+                     "consultas": [
+                       "posicion",
+                       "estado de cuenta"
+                     ],
+                     "transferencias": [
+                       "Entre Cuentas",
+                       "A terceros"
+                     ]
+                    }}/>
           { children }
           <Footer/>
         </div>
@@ -34,7 +48,8 @@ const mapStateToProps = state => {
     firstname: state.entities.firstname,
     lastname: state.entities.lastname,
     lastConnection: state.entities.lastConnection,
-    userImage: state.sessionReducer.imgURL
+    userImage: state.sessionReducer.imgURL,
+    options: state.sessionReducer.options
   };
 }
 
