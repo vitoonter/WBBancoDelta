@@ -6,10 +6,33 @@ import Button from '../../atoms/Button'
 import InputPassword from '../../atoms/loginAtoms/InputPassword'
 import HelpText from  '../../atoms/loginAtoms/HelpText'
 
-export default class LoginPassword extends Component {
+import { loginPassword } from '../../../actions/index.js';
+import { connect } from 'react-redux';
+
+class LoginPassword extends Component {
   handlePasswordChange(e) {
     console.log("handling password");
   }
+
+  constructor(props) {
+    super(props);
+    this.state = {password: ""};
+    this.onChange = this.onChange.bind(this);
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onChange(e) {
+    let state = {};
+    state[e.target.name] = e.target.value;
+    this.setState(state);
+  }
+
+  onClick() {
+    console.log( this.state.password);
+    this.props.loginPassword(this.props.username, this.state.password);
+  }
+
+
   render() {
     return (
       <div>
@@ -28,10 +51,15 @@ export default class LoginPassword extends Component {
                     <div className="form-group login-border clearfix">
                       <i className="fa fa-lock l-left fa-2x" aria-hidden="true"></i>
                       <div className="l-right">
-                        <InputPassword placeholder="CONTRASEÑA"/>
+                        <input type="text"
+                        className="login-input"
+                        onChange={this.onChange}
+                        name="password"
+                        placeholder="CONTRASEÑA"
+                        />
                       </div>
                     </div>
-                    <Button link="transference1" className="login-button" text="SIGUIENTE" />
+                      <button type="button" className="login-button" onClick={this.onClick}>{this.context.intl.formatMessage({id:"NEXT"})}</button>
                   </form>
                 </div>
 
@@ -41,10 +69,15 @@ export default class LoginPassword extends Component {
                     <div className="form-group login-border clearfix">
                       <i className="fa fa-lock l-left fa-2x" aria-hidden="true"></i>
                       <div className="l-left">
-                        <InputPassword placeholder="CONTRASEÑA"/>
+                        <input type="text"
+                        className="login-input"
+                        onChange={this.onChange}
+                        name="password"
+                        placeholder="CONTRASEÑA"
+                        />
                       </div>
                     </div>
-                    <Button link="transference1" className="login-button" text="SIGUIENTE" />
+                      <button type="button" className="login-button" onClick={this.onClick}>{this.context.intl.formatMessage({id:"NEXT"})}</button>
                   </form>
                 </div>
               </div>
@@ -64,4 +97,26 @@ export default class LoginPassword extends Component {
     )
   }
 }
+
+LoginPassword.contextTypes ={
+ intl:React.PropTypes.object.isRequired
+}
+
+const mapStateToProps = state => {
+  return {
+    username: "Eugenia2",
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+   loginPassword: (username,password) => {
+     dispatch(loginPassword(username,password));
+   }
+  };
+}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LoginPassword)
 
